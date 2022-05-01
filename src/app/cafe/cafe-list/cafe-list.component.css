@@ -1,0 +1,65 @@
+* {
+  font-family: 'Inter';
+  font-style: normal;
+
+  color: #000000;
+}
+
+h1 {
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 53px;
+
+  color: #000000;
+}
+
+div.image {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px 0px;
+}
+
+div.image img {
+  width: 100%;
+  height: auto;
+}
+
+table {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+table thead th {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+table tbody th {
+  font-weight: 700;
+  color: #000000;
+}
+
+table > tbody > td {
+  font-weight: 400;
+}
+
+p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 0px;
+  margin: 0px;
+}
+
+footer {
+  padding: 20px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 22px;
+}
