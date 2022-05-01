@@ -11,6 +11,7 @@ import { Tipo } from '../tipo.enum'
 export class CafeListComponent implements OnInit {
 
   cafes: Array<Cafe> = [];
+  tipos = [{'tipo': Tipo.BLEND, 'cant': 0}, {'tipo': Tipo.CAFEDEORIGEN, 'cant': 0}];
 
   constructor(private cafeService: CafeService) { }
 
@@ -20,8 +21,20 @@ export class CafeListComponent implements OnInit {
     })
   }
 
+  getTipos(): void {
+
+    this.cafeService.getCafes().subscribe((cafes) => {
+      cafes.forEach(cafe => {
+        let index = this.tipos.findIndex(item => item.tipo == cafe.tipo);
+        this.tipos[index]['cant'] ++;
+      });
+    });
+
+  }
+
   ngOnInit() {
     this.getCafes();
+    this.getTipos();
   }
 
 }
